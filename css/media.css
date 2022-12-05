@@ -146,6 +146,7 @@
     }
 
     .property-container__text {
+        width: 150px;
         font-size: 24px;
     }
 
