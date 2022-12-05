@@ -327,6 +327,5 @@ for (let i = 0; i < detailsCloseButton.length; i++) {
 
 window.addEventListener('click', function (event) {
     if (event.target.hasAttribute('data-btn')){
-        console.log(555)
     }
   })
