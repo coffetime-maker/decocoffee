@@ -1,0 +1,463 @@
+@media (max-width: 1440px) {
+
+    /* header */
+
+    .header__container {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    /* footer */
+    .footer__container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        font-size: 30px;
+    }
+
+    .counter-control {
+        width: 80px;
+        height: 60px;
+    }
+
+    /* header */
+
+    .nav__list {
+        position: absolute;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        background-color: var(--brown);
+        width: 100%;
+        height: 330px;
+        text-align: center;
+        top: 86px;
+        left: -100%;
+        -webkit-box-shadow: 0px 5px 10px 2px rgba(71, 45, 45, 0.2);
+                box-shadow: 0px 5px 10px 2px rgba(71, 45, 45, 0.2);
+
+        -webkit-transition: .2s;
+
+        -o-transition: .2s;
+
+        transition: .2s;
+    }
+
+    .nav__list.active {
+        left: 0;
+    }
+
+    .nav__list .menu__item {
+        padding: 20px 0;
+    }
+
+    .nav__list .menu__item:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .nav__bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav__bar.active .bar__line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav__bar.active .bar__line:nth-child(1) {
+        -webkit-transform: translateY(14px) rotate(45deg);
+            -ms-transform: translateY(14px) rotate(45deg);
+                transform: translateY(14px) rotate(45deg);
+    }
+
+    .nav__bar.active .bar__line:nth-child(3) {
+        -webkit-transform: translateY(-14px) rotate(-45deg);
+            -ms-transform: translateY(-14px) rotate(-45deg);
+                transform: translateY(-14px) rotate(-45deg);
+    }
+
+    .cart-btn__pic {
+        width: 40px;
+        height: 40px;
+    }
+
+    .cart-product__title {
+        font-size: 24px;
+    }
+
+    /* hero */
+
+    .hero__container {
+        height: 330px;
+        background-image: url('../img/hero-mobile.svg');
+    }
+
+    /* cards */
+
+    .cards {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+
+    .cards__item {
+        width: 400px;
+        height: 400px;
+    }
+
+    .cards__item__content__price {
+        top: 100px;
+        right: 30px;
+    }
+
+    .cards__item__content__btn {
+        top: 150px;
+        right: 30px;
+    }
+
+    /* details */
+
+    .details__item.visible {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    .details__item__right__img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .details__item__right__descr {
+        display: none;
+    }
+
+    .details__item__left {
+        width: 100%;
+    }
+
+    .details__item__left__title {
+        font-size: 30px;
+    }
+
+    .property-container__text {
+        font-size: 24px;
+    }
+
+    .details__item__left__btn {
+        margin-bottom: 0;
+        padding: 20px 30px;
+        width: 500px;
+    }
+
+    /* about */
+
+    .about {
+        background-image: none;
+        max-height: 100%;
+    }
+
+    .about__container {
+        padding: 0;
+    }
+
+    .about__descr {
+        max-width: 90%;
+    }
+
+    /* jurnal */
+
+    .jurnal-content__item.main .jurnal-content__item__caption {
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+    .jurnal-content__item.main .jurnal-content__item__caption {
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .jurnal-content__item__container__btn {
+        left: 20px;
+    }
+
+    /* footer */
+
+    .contacts__title {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 30px;
+    }
+
+    /* cart */
+    .cart-product__pic {
+        display: none;
+    }
+
+    /* menu */
+
+    .menu__item__link {
+        font-size: 20px;
+    }
+
+    /* products */
+
+    .products__top {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    .products__top__title {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .products__bottom {
+        padding-top: 40px;
+    }
+
+    /* cards */
+
+    .cards {
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    }
+
+    .cards__item {
+        width: 500px;
+    }
+
+    .cards__item.special::before {
+        font-size: 20px;
+    }
+
+    .cards__item.unavailable::before {
+        font-size: 20px;
+    }
+
+    .cards__item__content__title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* cart */
+
+    .cart-product .counter-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        margin: 0 auto;
+        padding: 10px 10px;
+    }
+
+    .cart-product .cart-product__pic {
+        height: 150px;
+        margin-right: 20px;
+    }
+
+    .cart-content__btn {
+        font-size: 20px;
+    }
+
+    .cart-content__fullprice {
+        font-size: 20px;
+    }
+
+    /* products */
+
+    #searchInput {
+        max-width: 300px;
+    }
+
+    /* cards */
+
+    .cards {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .cards__item {
+        width: 300px;
+        height: 500px;
+    }
+
+    .cards__item__content__price {
+        top: 150px
+    }
+
+    .cards__item__content__btn {
+        top: 230px
+    }
+
+    /* details */
+
+    .details__item.visible {
+        padding-top: 60px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .details__item__right__img {
+        padding: 10px 0;
+        width: 150px;
+        height: 150px;
+    }
+
+    .details__item__left__title {
+        font-size: 18px;
+        max-width: 300px;
+    }
+
+    .details__item__left__descr {
+        max-width: 250px;
+    }
+
+    .details__item__left__btn {
+        width: 250px;
+        font-size: 16px;
+    }
+
+    /* jurnal */
+
+    .jurnal-content__item.main .jurnal-content__item__img {
+        display: none;
+    }
+
+    /* footer */
+    .footer-content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .footer-content__menu {
+        display: none;
+    }
+
+    .footer-content__copyright {
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1;
+    }
+
+    .footer-content__contacts {
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
+    }
+}
+
+@media (max-width: 320px) {
+
+    /* header */
+
+    .header {
+        height: 100px;
+    }
+
+    .header-content {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .header-content__logo {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
+        grid-column: 1 / span 2;
+    }
+
+    /* cart */
+    .cart-content__btn {
+        font-size: 16px;
+    }
+
+    /* products */
+
+    .products__top__search p {
+        font-size: 24px;
+    }
+
+    #searchInput {
+        max-width: 250px;
+    }
+
+    /* cards */ 
+        .cards {
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+    
+        .cards__item {
+            width: 250px;
+            height: 500px;
+        }
+    
+        .cards__item__content__price {
+            top: 200px
+        }
+    
+        .cards__item__content__btn {
+            top: 250px;
+            right: 8px;
+        }
+
+    /* details */
+
+    .details__item.visible {
+        padding-top: 60px;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    .details__item__left__title {
+        font-size: 16px;
+    }
+
+    .about__descr {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    /* jurnal */
+
+    .jurnal__container__descr {
+        font-size: 20px;
+    }
+
+    .jurnal-content__item__caption {
+        font-size: 24px;
+    }
+
+    .jurnal-content__item__container__btn {
+        left: 13px;
+    }
+
+    /* footer */
+
+    .copyright__sign {
+        font-size: 16px;
+    }
+
+    .copyright__info {
+        font-size: 16px;
+    }
+
+    .contacts__title {
+        font-size: 18px;
+    }
+
+}

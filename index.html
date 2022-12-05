@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Deco-Coffee</title>
+    <meta name="description"
+        content="Кофе в зернах в интернет-магазине Deco-Coffee. Купить кофе ручного производства. Купить кофе в зернах, вьетнамский кофе, колумбийский, кофе без кофеина можно с бесплатной доставкой.">
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+    <link rel="icon" href="/img/favicon.ico">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container header-content">
+            <picture class="header-content__logo">
+                <source media="(min-width: 992px)" srcset="img/logo.svg">
+                <source media="(min-width: 576px)" srcset="img/logo-tab.svg">
+                <img src="img/logo-mobile.svg" alt="Логотип">
+            </picture>
+            <nav class="header-content__nav nav">
+                <ul class="nav__list menu">
+                    <li class="nav__list__item menu__item">
+                        <a href="#products" class="nav__list__item__link menu__item__link">Каталог</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#about" class="nav__list__item__link menu__item__link">О нас</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#jurnal" class="nav__list__item__link menu__item__link">Журнал</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#footer" class="nav__list__item__link menu__item__link">Контакты</a>
+                    </li>
+                </ul>
+                <div class="nav__bar bar">
+                    <span class="bar__line"></span>
+                    <span class="bar__line"></span>
+                    <span class="bar__line"></span>
+                </div>
+            </nav>
+            <button class="header-content__btn cart-btn" aria-label="Кнопка показа товаров в корзине">
+                <svg class="cart-btn__pic" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.27274 21C8.77482 21 9.18183 20.5736 9.18183 20.0476C9.18183 19.5216 8.77482 19.0952 8.27274 19.0952C7.77066 19.0952 7.36365 19.5216 7.36365 20.0476C7.36365 20.5736 7.77066 21 8.27274 21Z"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M18.2727 21C18.7748 21 19.1818 20.5736 19.1818 20.0476C19.1818 19.5216 18.7748 19.0952 18.2727 19.0952C17.7707 19.0952 17.3636 19.5216 17.3636 20.0476C17.3636 20.5736 17.7707 21 18.2727 21Z"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M1 1H4.63636L7.07273 13.7524C7.15586 14.1909 7.38355 14.5847 7.71595 14.865C8.04835 15.1454 8.46427 15.2943 8.89091 15.2857H17.7273C18.1539 15.2943 18.5698 15.1454 18.9022 14.865C19.2346 14.5847 19.4623 14.1909 19.5455 13.7524L21 5.7619H5.54545"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="cart-btn__quantity"></span>
+            </button>
+            <div class="header-content__cart cart-content">
+                <div data-cart-empty class="cart-content__empty">
+                    Корзина пуста
+                </div>
+                <ul class="cart-content__list"></ul>
+                <div class="cart-content__bottom">
+                    <div class="cart-content__fullprice">
+                        <span>Итого:</span>
+                        <span class="fullprice">0</span>
+                        <span class="fullprice-text">руб.</span>
+                    </div>
+                    <button class="cart-content__btn">Оформить заказ</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="hero">
+            <h1 class="hero__title none">Интернет-магазин Deco-Coffee</h1>
+            <div class="hero__container"></div>
+        </section>
+        <section id="products" class="products">
+            <div class="products__top">
+                <h2 class="products__top__title title">Каталог</h2>
+                <form class="products__top__search">
+                    <p>
+                        <input type="text" id="searchInput" placeholder="Поиск">
+                    </p>
+                </form>
+            </div>
+            <div class="products__bottom">
+                <ul class="products__bottom__content cards"></ul>
+            </div>
+        </section>
+        <section class="details">
+            <h2 class="details__title none">Подробнее о товаре</h2>
+            <ul class="details__list"></ul>
+        </section>
+        <section id="about" class="about">
+            <div class="about__container">
+                <h2 class="about__title">Deco-Coffee</h2>
+                <p class="about__descr descr">
+                    Интернет-магазин Deco-Coffee предлагает ассортимент зернового кофе
+                    собственного производства. В&nbsp;нашем магазине&nbsp;Вы можете приобрести эксклюзивный кофе
+                    в&nbsp;упаковке&nbsp;по&nbsp;250г.
+                    <br>
+                    Все, что необходимо сделать, это выбрать любимый сорт и&nbsp;оформить заказ.
+                    <span id="dots">...</span><span id="more">
+                        <br>
+                        Deco-Coffee&nbsp;&mdash; это лучшее в&nbsp;мире оборудование, автоматизация
+                        и&nbsp;многоступенчатый контроль
+                        качества.
+                        <br>
+                        Наша цель&nbsp;&mdash; максимально раскрыть вкус каждого лота с&nbsp;помощью обжарки
+                        и&nbsp;делать
+                        это стабильно от
+                        партии к&nbsp;партии. Для этого мы&nbsp;продумали все этапы производства &mdash;
+                        от&nbsp;хранения до&nbsp;упаковки.
+                        <br>
+                        Покупайте кофе в&nbsp;зернах в&nbsp;нашем интернет&nbsp;-&nbsp;магазине и&nbsp;наслаждайтесь
+                        каждой чашечкой
+                        ароматного напитка!
+                    </span>
+                </p>
+                <button onclick="myFunction()" id="myBtn">Читать далее</button>
+            </div>
+        </section>
+        <section id="jurnal" class="jurnal">
+            <div class="jurnal__container">
+                <h2 class="jurnal__container__title title">Журнал о кофе</h2>
+                <p class="jurnal__container__descr descr">
+                    Здесь мы публикуем полезные статьи о кофе и делимся накопленными знаниями
+                </p>
+                <ul class="jurnal__container__list jurnal-content"></ul>
+            </div>
+        </section>
+    </main>
+
+
+    <footer id="footer" class="footer">
+        <div class="footer__container">
+            <picture class="footer__container__logo">
+                <source media="(min-width: 992px)" srcset="img/logo.svg">
+                <source media="(min-width: 576px)" srcset="img/logo-tab.svg">
+                <img src="img/logo-mobile.svg" alt="Логотип">
+            </picture>
+            <div class="footer__container__footer-content footer-content">
+                <ul class="footer-content__menu menu">
+                    <li class="menu__item">
+                        <a href="#products" class="menu__item__link">Каталог</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#about" class="menu__item__link">О нас</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#jurnal" class="menu__item__link">Журнал</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#contacts" class="menu__item__link">Контакты</a>
+                    </li>
+                </ul>
+                <div class="footer-content__copyright copyright">
+                    <p class="copyright__sign">
+                        © 2022 «Deco-Coffee»
+                    </p>
+                    <p class="copyright__info">
+                        Использование любых материалов с&nbsp;данного ресурса возможно только после письменного согласия
+                        владельца авторских прав
+                    </p>
+                </div>
+                <div class="footer-content__contacts contacts">
+                    <p class="contacts__title">
+                        Контакты для связи:
+                    </p>
+                    <div class="contacts__links">
+                        <a class="contacts__links__item" href="https://t.me/machtbetty" target="_blank">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16Z"
+                                    fill="#0088CC" />
+                                <path
+                                    d="M8.09992 15.7083C12.3949 13.8371 15.2589 12.6034 16.6919 12.0074C20.7834 10.3056 21.6335 10.01 22.1877 10.0001C22.3095 9.99805 22.582 10.0283 22.7586 10.1715C22.9076 10.2924 22.9486 10.4558 22.9683 10.5705C22.9879 10.6851 23.0123 10.9464 22.9929 11.1505C22.7712 13.4801 21.8118 19.1335 21.3237 21.7427C21.1172 22.8468 20.7105 23.217 20.3168 23.2532C19.4613 23.3319 18.8116 22.6878 17.9829 22.1446C16.6862 21.2946 15.9537 20.7654 14.695 19.936C13.2404 18.9774 14.1834 18.4506 15.0124 17.5896C15.2293 17.3643 18.999 13.9355 19.0719 13.6244C19.0811 13.5855 19.0895 13.4405 19.0034 13.3639C18.9172 13.2874 18.7901 13.3136 18.6983 13.3344C18.5683 13.3639 16.4968 14.7331 12.4839 17.4419C11.8959 17.8457 11.3633 18.0424 10.8862 18.0321C10.3601 18.0207 9.34822 17.7346 8.59598 17.4901C7.67333 17.1902 6.94002 17.0316 7.00388 16.5223C7.03714 16.257 7.40248 15.9856 8.09992 15.7083Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                        <a class="contacts__links__item" href="https://wa.me/79313427297" target="_blank">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16Z"
+                                    fill="#25D366" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M21.6 10.3C20.1 8.8 18.1 8 16 8C11.6 8 8 11.6 8 16C8 17.4 8.40001 18.8 9.10001 20L8 24L12.2 22.9C13.4 23.5 14.7 23.9 16 23.9C20.4 23.9 24 20.3 24 15.9C24 13.8 23.1 11.8 21.6 10.3ZM16 22.6C14.8 22.6 13.6 22.3 12.6 21.7L12.4 21.6L9.89999 22.3L10.6 19.9L10.4 19.6C9.69999 18.5 9.39999 17.3 9.39999 16.1C9.39999 12.5 12.4 9.5 16 9.5C17.8 9.5 19.4 10.2 20.7 11.4C22 12.7 22.6 14.3 22.6 16.1C22.6 19.6 19.7 22.6 16 22.6ZM19.6 17.6C19.4 17.5 18.4 17 18.2 17C18 16.9 17.9 16.9 17.8 17.1C17.7 17.3 17.3 17.7 17.2 17.9C17.1 18 17 18 16.8 18C16.6 17.9 16 17.7 15.2 17C14.6 16.5 14.2 15.8 14.1 15.6C14 15.4 14.1 15.3 14.2 15.2C14.3 15.1 14.4 15 14.5 14.9C14.6 14.8 14.6 14.7 14.7 14.6C14.8 14.5 14.7 14.4 14.7 14.3C14.7 14.2 14.3 13.2 14.1 12.8C14 12.5 13.8 12.5 13.7 12.5C13.6 12.5 13.5 12.5 13.3 12.5C13.2 12.5 13 12.5 12.8 12.7C12.6 12.9 12.1 13.4 12.1 14.4C12.1 15.4 12.8 16.3 12.9 16.5C13 16.6 14.3 18.7 16.3 19.5C18 20.2 18.3 20 18.7 20C19.1 20 19.9 19.5 20 19.1C20.2 18.6 20.2 18.2 20.1 18.2C20 17.7 19.8 17.7 19.6 17.6Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bar.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/more.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/jurnal.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/calcCartPrice.js"></script>
+    <script src="js/toggleCartStatus.js"></script>
+    <script src="js/animcart.js"></script>
+
+
+</body>
+
+</html>
